@@ -1,6 +1,6 @@
 {
   "name": "deskera-cli",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Command Line Deskera API Client in Node.js",
   "main": "bin/index.js",
   "scripts": {
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Deskera/deskera-cli-node-sample#readme",
   "dependencies": {
     "axios": "^0.19.2",
+    "chalk": "^4.1.0",
     "yargs": "^15.4.0"
   }
 }

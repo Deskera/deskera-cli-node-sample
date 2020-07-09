@@ -2,6 +2,7 @@
 
 const yargs = require("yargs");
 const axios = require("axios");
+const chalk = require("chalk");
 
 const args = yargs
  .usage("Usage: -n <name>")
@@ -21,7 +22,7 @@ if (args.lang) {
 const url = args.lang ? `https://uselessfacts.jsph.pl/random.json?language=${escape(args.lang)}` : "https://uselessfacts.jsph.pl/random.json";
 
 axios.get(url).then(res => {
-    console.log(res.data.text);
+    console.log( chalk.green.bold( res.data.text ) );
   }).catch(err => {
-    console.log(err.response.data.message);
+    console.log( chalk.red( err.response.data.message ) );
   });
