@@ -16,10 +16,16 @@ $ npm install -g .
 
 ## How to Use
 
-Execute
+Execute for random language result
 
 ```bash
 $ hello -n Deskera
+```
+
+Execute for English language result
+
+```bash
+$ hello -n Deskera -l en
 ```
 
 Check version
