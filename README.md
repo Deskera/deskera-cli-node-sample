@@ -17,9 +17,3 @@ Execute
 ```bash
 $ hello
 ```
-
-Check version
-
-```bash
-$ hello --version
-```
