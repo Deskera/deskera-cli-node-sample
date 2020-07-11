@@ -5,6 +5,7 @@ This is a sample Command Line Deskera API Client in Node.js, featured in five p
  * [Part 1: Hello, World](https://betterbusiness.deskera.com/command-line-deskera-api-client-in-node-js-part-1-hello-world/)
  * [Part 2: Hello, You](https://betterbusiness.deskera.com/command-line-deskera-api-client-in-node-js-part-2-hello-you/)
  * [Part 3: Call an API Endpoint](https://betterbusiness.deskera.com/command-line-deskera-api-client-in-node-js-part-3-call-an-api-endpoint/)
+ * [Part 4: OAuth 2.0 Authentication](https://betterbusiness.deskera.com/command-line-deskera-api-client-in-node-js-part-4-oauth-2-0-authentication/)
 
 ## Installation
 
@@ -15,6 +16,12 @@ $ npm install -g .
 ```
 
 ## How to Use
+
+Login
+
+```bash
+$ deskera-login
+```
 
 Execute for random language result
 

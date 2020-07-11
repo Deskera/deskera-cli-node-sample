@@ -1,6 +1,6 @@
 {
   "name": "deskera-cli",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Command Line Deskera API Client in Node.js",
   "main": "bin/index.js",
   "scripts": {
@@ -13,15 +13,20 @@
   "author": "Deskera",
   "license": "MIT",
   "bin": {
-    "hello": "./bin/index.js"
+    "hello": "./bin/index.js",
+    "deskera-login": "./bin/login.js"
   },
   "bugs": {
     "url": "https://github.com/Deskera/deskera-cli-node-sample/issues"
   },
   "homepage": "https://github.com/Deskera/deskera-cli-node-sample#readme",
   "dependencies": {
+    "@hapi/hapi": "^19.1.1",
     "axios": "^0.19.2",
     "chalk": "^4.1.0",
+    "dotenv": "^8.2.0",
+    "open": "^7.0.4",
+    "uuid": "^8.2.0",
     "yargs": "^15.4.0"
   }
 }
