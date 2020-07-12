@@ -33,7 +33,7 @@ module.exports = ( { deskeraAuthUrl, deskeraApiUrl, clientId, clientSecret, scop
  const getToken = async code => {
    try {
      const config = {
-       headers: { Authorization: `Basic `.concat(Buffer.from(`${clientId}:${clientSecret}`).toString('base64'))      }
+       headers: { Authorization: `Basic `.concat(Buffer.from(`${clientId}:${clientSecret}`).toString('base64')) }
      };
      const request = {
        grant_type: "authorization_code",
@@ -69,7 +69,7 @@ module.exports = ( { deskeraAuthUrl, deskeraApiUrl, clientId, clientSecret, scop
          try {
            const code = request.query.code;
            const token = await getToken( code );
-           resolve ( { token } );
+           resolve( { token } );
            return `Token received ${token['deskera-token']}`;
          } catch ( err ) {
            reject( err );
@@ -84,7 +84,7 @@ module.exports = ( { deskeraAuthUrl, deskeraApiUrl, clientId, clientSecret, scop
      open( authorizeUrl );
    } );
  };
-  return {
+ return {
    executeAuthFlow
  };
 };
