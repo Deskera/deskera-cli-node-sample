@@ -5,6 +5,8 @@
 const chalk = require( "chalk" );
 const dotenv = require( "dotenv" );
 const authClient = require( "../src/auth" );
+const userClient = require( "../src/user" );
+
 dotenv.config();
 
 const config = {
@@ -20,7 +22,10 @@ const main = async () => {
  try {
    const auth = authClient( config );
    const token = await auth.executeAuthFlow();
-   console.log( chalk.green.bold( "Successfully authenticated Deskera CLI application!" ) );
+
+   const user = userClient();
+   const userDetails = user.getUserDetails ( token['deskera-token'] );
+   console.log( chalk.green.bold( "Successfully authenticated Deskera CLI application for " + userDetails.name + "!") );
  } catch ( err ) {
    console.log( chalk.red( err ) );
  }
