@@ -69,7 +69,7 @@ module.exports = ( { deskeraAuthUrl, deskeraApiUrl, clientId, clientSecret, scop
          try {
            const code = request.query.code;
            const token = await getToken( code );
-           resolve( { token } );
+           resolve( token );
            return `Token received ${token['deskera-token']}`;
          } catch ( err ) {
            reject( err );
